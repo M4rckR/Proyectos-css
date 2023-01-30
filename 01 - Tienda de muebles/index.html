@@ -5,46 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
 
     <header>
-        <h1>Tienda muebles</h1>
+        <h1 class="nombre-sitio">Tienda <span> muebles</span></h1>
     </header>
 
-    <nav>
-        <a href="index.html">Inicio</a>
-        <a href="nosotros.html">Nosotros</a>
-        <a href="tienda.html">Tienda</a>
-        <a href="blog.html">Blog</a>
-        <a href="galeria.html">Galería</a>
-        <a href="contacto.html">Contacto</a>
-    </nav>
+    <div class="contenedor-navegacion">
+        <nav class="nav-principal contenedor">
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="tienda.html">Tienda</a>
+            <a href="blog.html">Blog</a>
+            <a href="galeria.html">Galería</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </div>
 
-    <section>
-        <h2>Cateogorias de producto</h2>
-        <div>
-            <img src="assets/img/categoria1.jpg" alt="Imagen cateogoria">
-            <a href="#">Oficina</a>
-        </div>
 
-        <div>
-            <img src="assets/img/categoria2.jpg" alt="Imagen cateogoria">
-            <a href="#">Hogar</a>
-        </div>
+    <div class="hero"></div>
 
-        <div>
-            <img src="assets/img/categoria3.jpg" alt="Imagen cateogoria">
-            <a href="#">Cocina</a>
-        </div>
-    </section>
-
-    <section>
+    <section class="sobre-nosotros">
         <div>
             <h2>Sobre nosotros</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam expedita velit repudiandae vel adipisci repellat qui, deleniti aut, quod quis veritatis mollitia porro voluptatum accusamus fuga voluptatibus, laborum esse ad?  </p>
         </div>
     </section>
+
+    <section class="contenedor categorias">
+        <h2>Cateogorias de <span>producto</span> </h2>
+        <div class="listado-categorias ">
+            <div class="categoria">
+                <img src="assets/img/categoria1.jpg" alt="Imagen cateogoria">
+                <a href="#">Oficina</a>
+            </div>
+    
+            <div class="categoria">
+                <img src="assets/img/categoria2.jpg" alt="Imagen cateogoria">
+                <a href="#">Hogar</a>
+            </div>
+    
+            <div class="categoria">
+                <img src="assets/img/categoria3.jpg" alt="Imagen cateogoria">
+                <a href="#">Cocina</a>
+            </div>
+        </div>
+        
+    </section>
+
+
 
     <main>
         <h2>Nuestros Productos</h2>
@@ -125,7 +140,7 @@
     <footer>
         <div>
             <h3>Categorias</h3>
-            <nav>
+            <nav class="navegacion">
                 <a href="#">Cocina</a>
                 <a href="#">Oficina</a>
                 <a href="#">Jardin</a>
