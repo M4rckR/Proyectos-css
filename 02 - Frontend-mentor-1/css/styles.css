@@ -26,7 +26,6 @@ body {
     background-size: cover;
     color: white;
     font-family: var(--font1);
-    overflow: hidden;
 }
 
 a {
