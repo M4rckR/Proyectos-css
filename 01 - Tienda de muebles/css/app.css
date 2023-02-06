@@ -41,13 +41,15 @@ h3 {
     font-size: 3rem;
 }
 
+.text-center {
+    text-align: center;
+}
+
 .max-witdh-30 {
     max-width: 30rem;
 }
 
-.text-center {
-    text-align: center;
-}
+
 
 .contenedor {
     max-width: 120rem;
