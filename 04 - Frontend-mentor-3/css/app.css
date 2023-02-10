@@ -73,6 +73,7 @@ span {
 .headertec__container h2 {
     font-weight: var(--w200);
     font-size: 2.5rem;
+    line-height: 1.4;
 }
 
 .headertec__container span {
@@ -82,25 +83,101 @@ span {
 
 .headertec__container p{
     color: var(--neutral2);
+    line-height: 1.6;
 }
 
+.maintec {
+    margin: 5rem 0;
+}
+
+.maintec__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.maintec__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    row-gap: 2rem;
+}
 
 .maintec__card {
     background-color: #fff;
-    padding: 2rem;
+    padding: 3rem 2rem;
     display: flex;
     flex-direction: column;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px;
+}
+
+.maintec__container > .maintec__card:first-child {
+    border-top: 4px solid var(--primary2);
+}
+
+.maintec__container > .maintec__card:last-child {
+    border-top: 4px solid var(--primary4);
+}
+
+.maintec__grid .maintec__card:nth-child(1){
+    border-top: 4px solid var(--primary1);
+}
+
+.maintec__grid .maintec__card:nth-child(2){
+    border-top: 4px solid var(--primary3);
 }
 
 .maintec__img {
     align-self: flex-end;
 }
 
+.maintec__img img{
+    margin-left: auto;
+    width: 80%;
+}
+
+
 .maintec__card h3 {
     color: var(--neutral1);
-    font-size: 3rem 2rem;
+    font-size: 2rem;
 }
 
 .maintec__card p {
     color: var(--neutral2);
+}
+
+
+@media (min-width: 1024px){
+
+    .contenedor {
+        width: 80%;
+    }
+
+    .maintec__container {
+        flex-direction: row;
+        gap: 4rem;
+        align-items: center;
+    }
+
+    .maintec__card {
+        height: 25rem;
+    }
+
+
+    .maintec__card {
+        flex: 1;
+    }
+
+    .maintec__grid {
+        flex: 1.2;
+    }
+
+    .maintec__grid {
+        row-gap: 4rem;
+    }
+
+    .headertec__container h2 {
+        font-size: 3rem;
+    }
 }
