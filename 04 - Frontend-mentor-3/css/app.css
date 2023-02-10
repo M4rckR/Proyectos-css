@@ -1,0 +1,106 @@
+:root{
+    --primary1: hsl(0, 78%, 62%);
+    --primary2: hsl(180, 62%, 55%);
+    --primary3: hsl(34, 97%, 64%);
+    --primary4: hsl(212, 86%, 64%);
+    --neutral1: hsl(234, 12%, 34%);
+    --neutral2: hsl(229, 6%, 66%);
+    --neutral3: hsl(0, 0%, 98%);
+    --w200: 200;
+    --w400: 400;
+    --w600: 700;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,*:before,*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    background-color: var(--neutral3);
+    width: 100%;
+    min-height: 100vh;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+h1,h2,h3 {
+    margin: 0;
+}
+
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+span {
+    display: block;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 120rem;
+    margin: 0 auto
+}
+
+.headertec__container {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.headertec__container h2 {
+    font-weight: var(--w200);
+    font-size: 2.5rem;
+}
+
+.headertec__container span {
+    font-weight: var(--w600);
+    color: var(--neutral1);
+}
+
+.headertec__container p{
+    color: var(--neutral2);
+}
+
+
+.maintec__card {
+    background-color: #fff;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.maintec__img {
+    align-self: flex-end;
+}
+
+.maintec__card h3 {
+    color: var(--neutral1);
+    font-size: 3rem 2rem;
+}
+
+.maintec__card p {
+    color: var(--neutral2);
+}
