@@ -206,7 +206,7 @@ h3 {
 
     .opinion {
         flex-direction: row;
-        height: 25rem;
+        height: 30rem;
     }
 
     .opinion__card:nth-child(1) {
