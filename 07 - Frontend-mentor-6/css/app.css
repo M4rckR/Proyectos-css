@@ -1,0 +1,143 @@
+:root {
+    --primary1 : hsl(31, 77%, 52%);
+    --primary2 : hsl(184, 100%, 22%);
+    --primary3 : hsl(179, 100%, 13%);
+    --neutral1 : hsla(0, 0%, 100%, 0.75);
+    --neutral2 : hsl(0, 0%, 95%);
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,*:before,*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1.6rem;
+    background-color: var(--neutral3);
+    width: 100%;
+    min-height: 100vh;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+h1,h2,h3 {
+    margin: 0;
+}
+
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+
+.contenedor {
+    width: 90%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+}
+
+.grid__container {
+    max-width: 70rem;
+    margin-top: 10rem;
+    color: #fff;
+    margin-bottom: 10rem;
+}
+
+.grid__title h2 {
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+.grid__title p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+.grid__item {
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.grid__item p{
+    margin-bottom: 0;
+}
+
+.grid__item:nth-child(1) {
+    border-radius: 1rem 1rem 0 0;
+    background-color: var(--primary1);
+}
+.grid__item:nth-child(2) {
+    background-color: var(--primary2);
+}
+.grid__item:nth-child(3) {
+    background-color: var(--primary3);
+    border-radius: 0 0 1rem 1rem;
+}
+
+.grid__btn a {
+    background-color: #fff;
+    color: var(--primary1);
+    width: 15rem;
+    text-align: center;
+    padding: 1.5rem 2rem;
+    border-radius: 20px;
+}
+
+.grid__btn--second a{
+    color: var(--primary2);
+}
+
+.grid__btn--thirty a{
+    color: var(--primary3);
+}
+
+@media (min-width: 1024px){
+    .grid__container {
+        margin-top: 15rem;
+    }
+
+    .grid__container {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .grid__item:nth-child(1) {
+        border-radius: 1rem 0 0 1rem;
+    }
+
+    .grid__item:nth-child(3) {
+        border-radius: 0 1rem 1rem 0;
+    }
+
+    .grid__btn{
+        margin-top: 2rem;
+    }
+}
