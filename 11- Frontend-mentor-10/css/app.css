@@ -84,3 +84,9 @@ h3 {
 .card__text p{
     color: var(--color3);
 }
+
+@media (min-width: 1024px){
+    .card__container {
+        margin-top: 15rem;
+    }
+}
