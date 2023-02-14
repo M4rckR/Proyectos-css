@@ -70,6 +70,21 @@ h3 {
     gap: 2rem;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     max-width: 35rem;
+    animation: marcos 2s infinite alternate ease; 
+}
+
+@keyframes marcos {
+    0% {
+        transform: translateX(-45rem);
+    }
+
+    50% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(45rem);
+    }
 }
 
 .card__img img{
