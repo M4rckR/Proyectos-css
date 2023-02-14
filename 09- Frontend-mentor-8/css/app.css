@@ -1,0 +1,178 @@
+:root {
+    --primary1: hsl(225, 100%, 94%);
+    --primary2: hsl(245, 75%, 52%);
+    --neutral1: hsl(225, 100%, 98%);
+    --neutral2: hsl(224, 23%, 55%);
+    --neutral3: hsl(223, 47%, 23%);
+    --w500: 500;
+    --w700: 700;
+    --w900: 900;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,*:before,*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 1.6rem;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(180, 197, 246);
+    background-repeat: no-repeat;
+    background-size: contain;
+    overflow: hidden;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+h1,h2,h3 {
+    margin: 0;
+}
+
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+
+.contenedor {
+    width: 90%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+
+.card__container {
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    background-color: white;
+    border-radius: 20px;
+    max-width: 40rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.card__img img{
+    border-radius: 20px 20px 0 0;
+}
+
+.card__content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem 4rem 2rem;
+    gap: 2rem;
+}
+
+
+.card__info {
+    text-align: center;
+}
+
+.card__info h3{
+    color: var(--neutral3);
+    font-size: 2.5rem
+}
+
+.card__info p{
+    color: var(--neutral2);
+}
+
+.card__plan {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--neutral1);
+    padding: 0 1rem;
+    border-radius: 1rem;
+}
+
+.card__musicImg, .card__change   {
+    flex-grow: 1;
+}
+
+.card__price {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.card__price p:nth-child(1) {
+    font-weight: var(--w900);
+    margin-bottom: 0;
+}
+
+.card__price p:nth-child(2) {
+    margin-top: 0;
+    color: var(--neutral2);
+}
+
+.card__change a {
+    color: var(--primary2);
+    font-weight: var(--w700);
+    text-decoration: underline;
+    transition: all .3s;
+}
+
+.card__change a:hover {
+    color: hsl(245, 69%, 66%);
+}
+
+
+
+.card__btn a{
+    background-color: var(--primary2);
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    border-radius: 10px;
+    box-shadow: 1px 1px 15px -4px rgba(0, 0, 0, 0.561);
+    transition: all .3s;
+}
+
+.card__btn a:hover{
+    background-color: hsl(245, 69%, 62%);
+}
+
+.card__cancel a{
+    text-align: center;
+    font-weight: var(--w700);
+    color: var(--neutral2);
+    transition: all .3s;
+}
+
+.card__cancel a:hover{
+    color: var(--neutral3);
+}
+
+@media (min-width: 1024px){
+    .card__container {
+        margin-top: 12rem;
+    }
+}
