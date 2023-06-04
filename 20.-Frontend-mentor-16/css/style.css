@@ -74,6 +74,15 @@ main {
     background-size: cover;
 }
 
+@media (min-width:1024px ){
+    main {
+        background-color: var(--neutral4);
+        background-image: url(../images/bg-desktop.png);
+        background-size: cover;
+        background-position: 0 48vh;
+    }
+}
+
 .main {
     display: flex;
     justify-content: center;
@@ -86,6 +95,16 @@ main {
     gap: 2rem;
 }
 
+@media (min-width:1024px ){
+    .contenedor {
+        display: grid;
+        grid-template-columns: repeat(13,1fr);
+        align-items: flex-end;
+        column-gap: 4rem;
+    }
+    
+}
+
 .contenedor__item {
     background-color: var(--neutral3);
 }
@@ -96,6 +115,16 @@ main {
     flex-direction: column;
     gap: 4rem;
     border-radius: 1.5rem 10rem 1.5rem 1.5rem;
+}
+
+
+
+@media (min-width:1024px ){
+    .contenedor__item:first-child {
+        grid-column: 1/6;
+        padding-top: 6rem;
+        border-top-right-radius: 15rem;
+    }
 }
 
 .contenedor__image img {
@@ -124,9 +153,19 @@ main {
 
 
 .contenedor__item:last-child {
-    position: relative;
     padding: 4rem;
     border-radius: 1.8rem;
+}
+
+@media (min-width:1024px ){
+    .contenedor__item:last-child {
+        grid-column: 6/14;
+        height: 75%;
+    }
+}
+
+.contenedor__progress {
+    position: relative;
 }
 
 .contenedor__bar {
@@ -180,7 +219,7 @@ main {
 
 .contenedor__absolute {
     position: absolute;
-    bottom: -25%;   
+    bottom: -110%;   
     left: 50%;
     transform: translate(-50%,-18%);
     background-color: #fff;
@@ -189,9 +228,52 @@ main {
     font-size: 2.8rem;
     font-weight: var(--700);
     border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width:1024px ){
+    .contenedor__absolute {
+        top: -180%;
+        left: 100%;
+        transform: translateX(-100%);
+        height: 8rem;
+        width: 18rem;
+    }
 }
 
 .contenedor__absolute p span {
     font-weight: var(--400);
     font-size: 1.6rem;
+}
+
+
+.triangle {
+    display: none;
+    position: absolute;
+}
+
+@media (min-width:1024px ){
+
+    .triangle {
+        display: block;
+        bottom: -3rem;
+        right: 0;
+        background-color: #fff;
+        width: 5rem;
+        height: 5rem;
+        clip-path: polygon(100% 0, 0 0, 100% 100%);
+    }
+
+    .contenedor__absolute p  {
+        font-weight: var(--700);
+        font-size: 4rem;
+    }
+
+
+    .contenedor__absolute p span {
+        font-weight: var(--400);
+        font-size: 1.6rem;
+    }
 }
