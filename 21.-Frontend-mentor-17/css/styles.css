@@ -52,6 +52,10 @@ h3 {
     font-size: 3rem;
 }
 
+p{
+    line-height: 1.6;
+}
+
 .contenedor {
     width: 90%;
     max-width: 120rem;
@@ -167,6 +171,57 @@ h3 {
     background-position: center 8rem;
 }
 
+@media (min-width:1024px ){
+    .gridmain {
+        padding: 5rem 0;
+        height: 60rem;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: auto;
+        background-image: url(../images/image-computer.png);
+        background-size: 70rem;
+        background-position: -20rem center;
+        align-items: center;
+        column-gap: 4rem;
+    }
+}
+
+@media (min-width:1180px ){
+    .gridmain {
+        height: 70rem;
+        background-size: 80rem;
+    }
+}
+
+@media (min-width:1300px ){
+    .gridmain {
+        height: 80rem;
+        background-size: 90rem;
+    }
+}
+
+@media (min-width:1450px ){
+    .gridmain {
+        height: 90rem;
+        background-size: 100rem;
+    }
+}
+
+
+
+@media (min-width:1600px ){
+    .gridmain {
+        height: 95rem;
+        background-size: 110rem;
+    }
+}
+
+@media (min-width:1800px ){
+    .gridmain {
+        height: 100rem;
+        background-size: 120rem;
+    }
+}
+
 .gridmain__cards {
     grid-row: 2/3;
     width: 90%;
@@ -177,6 +232,37 @@ h3 {
     gap: 2rem;
 }
 
+@media (min-width:1024px ){
+    .gridmain__cards {
+        text-align: left;
+        max-width: 40rem;
+        grid-column: 2/3;
+        grid-area: 1/2;
+        display: flex;
+        width: 100%;
+        gap: 1rem;
+    }
+}
+
+@media (min-width:1024px ){
+    .gridmain__cards {
+        gap: 2rem;
+    }
+}
+
+@media (min-width:1450px ){
+    .gridmain__cards {
+        gap: 2.8rem;
+    }
+}
+
+@media (min-width:1600px ){
+    .gridmain__cards {
+        gap: 3.2rem;
+    }
+}
+
+
 .card__title {
     font-size: 2.4rem;
     margin: 1rem 0;
@@ -184,4 +270,153 @@ h3 {
 
 .card__paragraph {
     color: var(--neutral2);
+}
+
+/* acces */
+
+.acces {
+    text-align: center;
+}
+
+.acces__title {
+    font-size: 2.8rem;
+}
+
+.acces__paragraph {
+    color: var(--neutral2);
+}
+
+.acces__picture {
+    padding: 4rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.acces__picture img {
+    width: 100%;
+    max-width: 90rem;
+}
+
+/* supercarge */
+.supercarge {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.supercarge__title{
+    font-size: 2.8rem;
+}
+
+.supercarge__principal {
+    font-size: 2.4rem;
+}
+
+.supercarge__picture {
+    display: flex;
+    justify-content: center;
+}
+
+.supercarge__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding-bottom: 6rem;
+}
+
+.supercarge__legend,
+.supercarge__paragraph {
+    color: var(--neutral2);
+}
+
+@media (min-width:768px ){
+    .supercarge__grid {
+        padding: 2rem 0;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        align-items: baseline;
+    }
+}
+
+/* logos */
+.logos {
+    padding: 10rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6rem;
+}
+
+@media (min-width:768px ){
+    .logos {
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+    }
+}
+
+/* solucion del header */
+
+.header__container--main {
+    padding: 15rem 0;
+}
+
+/* footer */
+
+.footer {
+    background-color: hsl(206, 13%, 89%);
+    padding: 5rem 0;
+}
+
+.footer__contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+}
+
+@media (min-width:768px ){
+    .footer__contenedor {
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+    }
+}
+
+.footer__img {
+    grid-column: 1/3;
+    display: flex;
+    justify-content: center;
+}
+
+.footer__img img {
+    width: 5rem;
+}
+
+.footer__links {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+}
+
+@media (min-width:768px ){
+    .footer__links {
+        grid-column: 3/9;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    
+}
+
+.footer__iconos {
+    display: flex;
+    gap: 4rem;
+}
+
+@media (min-width:768px ){
+    .footer__iconos {
+        grid-column: 9/13;
+        display: flex;
+        justify-content: center;
+    }
 }
