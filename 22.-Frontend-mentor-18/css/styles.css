@@ -1,0 +1,327 @@
+:root {
+    --text1 : #d89eff;
+    --text2 : rgb(146, 65, 200);
+    --text3 : hsl(271, 15%, 43%);
+    --text4 : hsl(206, 6%, 79%);
+    --text5 : hsl(271, 36%, 24%);
+    --text6 : hsl(270, 7%, 64%);
+
+    --gradient1: #e942ff;
+    --gradient2: #8838ff;
+
+    --secundary1 : hsl(0, 0%, 100%);
+    --secundary2 : hsl(270, 20%, 96%);
+    --secundary3 : hsl(271, 36%, 24%);
+    --secundary4: hsl(289, 100%, 72%);
+
+    --font : 'Rubik', sans-serif;
+    --w400 : 400;
+    --w500 : 500;
+    --w700 : 700;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,*:before,*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.6rem;
+    width: 100%;
+    min-height: 100vh;
+    font-family: var(--font);
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+h1,h2,h3 {
+    margin: 0;
+}
+
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+@media (min-width:1024px ){
+    .contenedor {
+        width: 80%;
+    }
+}
+
+.main {
+    position: relative;
+}
+
+.main__chat {
+    position: relative;
+}
+
+.main__container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main__detail {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    width: 18rem;
+    height: 3rem;
+    background-color: var(--secundary1);
+    border-radius: 0 0 2.4rem 2.4rem;
+}
+
+@media (min-width:768px ){
+    .main__detail {
+        width: 20rem;
+    }
+}
+
+
+.main__background {
+    position: absolute;
+    z-index: 10;
+    left: -18rem;
+    width: 100%;
+    height: 55rem;
+    background: linear-gradient(180deg, rgb(160, 81, 213) 0%, rgba(136,56,255,1) 100%);
+    background-size: cover;
+    border-radius: 0 0 50rem 30rem;
+}
+
+
+@media (min-width:768px ){
+    .main__background {
+        height: 70rem;
+        background: linear-gradient(180deg, rgb(160, 81, 213) 0%, rgba(136,56,255,1) 100%);
+        background-size: cover;
+        border-radius: 0 0 50rem 50rem;
+    }
+}
+
+.main__container {
+    position: relative;
+    z-index: 20;   
+    padding: .1px;
+}
+
+
+.main__chat {
+    margin: 8rem 0;
+    background-color: var(--secundary2);
+    border: 12px solid var(--secundary1);
+    border-radius: 4rem;
+    max-width: 50rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.cabecera {
+    background: rgb(136,56,255);
+    background: linear-gradient(90deg, rgba(136,56,255,1) 11%, rgba(233,66,255,1) 100%);
+    padding: 4.8rem 2rem 2rem 2rem;
+    border-radius: 3.2rem 3.2rem .8rem .8rem;
+    display: flex;
+    align-items: center;
+    color: var(--secundary1);
+    gap: 1rem;
+}
+
+.cabecera__back {
+    display: flex;
+}
+
+.cabecera__profile {
+    flex: 1;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.cabecera__options {
+    font-weight: var(--w500);
+}
+
+.cabecera__img {
+    width: 4rem;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.cabecera__img img{
+    border-radius: 50%;
+}
+
+.cabecera__user {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+.cabecera__online {
+    color: var(--text4);
+    font-size: 1.2rem;
+}
+
+.cabecera__user p{
+    margin: 0;
+}
+
+.cabecera__name{
+    font-weight: var(--w500);
+}
+
+.main__messages {
+    padding: 2rem;
+}
+
+/* Chat */
+
+.main__messages {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.mesagges-2,
+.mesagges-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 1.4rem;
+}
+
+.mesagges-2 p,
+.mesagges-2 .mesagges-2__dog {
+    align-self: flex-end;
+}
+
+.mesagges-2 p {
+    background-color: var(--secundary1);
+    border-radius: 2rem 2rem .75rem 2rem;
+}
+
+.mesagges-2__dog {
+    display: flex;
+    gap: 1.4rem;
+}
+
+.mesagges-2__dog img {
+    width: 8rem;
+    border-radius: 2rem;
+}
+
+.mesagges-1 p,
+.mesagges-2 p,
+.mesagges-3 p{
+    margin: 0;
+    max-width: 60%;
+    padding: 1.4rem 1.8rem;
+}
+
+.mesagges-1 p{
+    color: var(--text2);
+    background-color: rgb(243, 223, 255);
+    border-radius: 2rem 2rem 2rem .75rem;
+}
+
+.mesagges-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.mesagges-3__money {
+    display: flex;
+}
+
+.mesagges-3__circle {
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.mesagges-3__description {
+    color: var(--text2);
+    background-color: rgb(243, 223, 255);
+    border-radius: 2rem 2rem 2rem .75rem;
+}
+
+.mesagges-3__money {
+    max-width: 70%;
+    color: white;
+    background: rgb(233,66,255);
+    background: linear-gradient(90deg, rgba(233,66,255,1) 11%, rgba(136,56,255,1) 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+    padding: 1rem .75rem;
+    border-radius: 2rem 2rem 2rem .75rem;
+}
+
+.messages-3__price {
+    font-weight: var(--w700);
+    font-size: 2rem;
+}
+
+.messages-3__paragraph {
+    padding: 0;
+    margin: 0;
+    flex: 1;
+}
+
+.main__input {
+    position: relative;
+}
+
+.main__input input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+.main__send {
+    position: absolute;
+    top: 50%;
+    left: 88%;
+    transform: translateY(-50%);    
+    background-color: var(--secundary3);
+    color: var(--secundary1);
+    padding: 1rem;
+    border-radius: 50%;
+}
