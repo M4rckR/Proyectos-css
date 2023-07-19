@@ -11,10 +11,11 @@
 
 .main__container {
 
-    @include m.tablet {
+    @include m.desktop {
         display: grid;
         grid-template-columns: 2fr 3fr;
         align-items: center;
+        gap: 2rem;
     }
     .main__text {
 
