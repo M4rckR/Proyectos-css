@@ -4,6 +4,7 @@
 .main {
     margin-top: 4rem;
     transition: all .3s;
+    margin-bottom: 15rem;
     @include m.tablet {
         margin-top: 12rem
     }
