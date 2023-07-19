@@ -1,0 +1,62 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.main__picture {
+    position: relative;
+    .main__modal {
+        width: 100%;
+    }
+}
+
+.modal__perfil {
+    padding: 2rem;
+    width: 80%;
+    max-width: 30rem;
+    position: absolute;
+    top: 85%;
+    right: 5%;
+    background-color: v.$color-back;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    @include m.tablet {
+    }
+    .modal__box {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        .modal__photo {
+            width: 4rem;
+            img {
+                margin: 0;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .modal__description {
+        font-family: v.$fuente-secundaria;
+        font-size: 2rem;
+        margin: 0;
+    }
+}
+
+.modal__box {
+    .modal__user {
+        .modal__name {
+            font-size: 1.4rem;
+            font-weight: v.$w-700;
+            @include m.tablet {
+                font-size: 1.6rem;
+            }
+        }
+        .modal__profession {
+            font-size: 1.2rem;
+            color: v.$gray;
+            @include m.tablet {
+                font-size: 1.4rem;
+            }
+        }
+    }
+}

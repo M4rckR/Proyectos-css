@@ -1,0 +1,25 @@
+
+.hamburger {
+    padding: 0;
+    &.is-active {
+        .hamburger-inner {
+            background-color: #FFF;
+            transition: all .3s;
+            &::after,
+            &::before {
+                background-color: #FFF;
+                transition: all .3s;
+            }
+        } 
+    }
+    .hamburger-inner {
+        background-color: #FFF;
+        transition: all .3s;
+        &::after,
+        &::before {
+            background-color: #FFF;
+            transition: all .3s;
+        }
+    }
+}
+
