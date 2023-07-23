@@ -1,0 +1,46 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.resumen{ 
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+
+
+    &:nth-child(1) {
+        grid-column: 1/4;
+    }
+
+    &__name ,
+    &__tiempo {
+        margin: 0;
+    }
+
+    &__name {
+        font-size: .8rem;
+        text-transform: uppercase;
+        color: v.$gray;
+        font-weight: 700;
+
+        @include m.tablet {
+            font-size: 1rem;
+        }
+    }
+    &__tiempo {
+        font-size: 1rem;
+        &--orange {
+            color: v.$color_principal;
+        }
+        
+        @include m.tablet {
+            font-size: 1.4rem;
+        }
+    }
+
+    &__icono {
+        width: 1.7rem;
+        @include m.tablet {
+            width: 3.4rem;
+        }
+    }
+}
