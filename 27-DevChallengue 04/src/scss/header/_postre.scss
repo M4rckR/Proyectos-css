@@ -6,6 +6,9 @@
     // &__contenedor {
 
     // }
+    @include m.tablet {
+        margin-bottom: 5rem;
+    }
 
     &__heading {
         font-family: v.$fuente_heading;

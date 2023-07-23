@@ -28,12 +28,14 @@
     }
     &__tiempo {
         font-size: 1rem;
+        font-weight: 500;
         &--orange {
             color: v.$color_principal;
         }
         
         @include m.tablet {
             font-size: 1.4rem;
+            margin: .5rem 0;
         }
     }
 

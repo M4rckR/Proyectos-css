@@ -3,25 +3,64 @@
 
 
 .receta {
+
+    &__detalles {
+        order: 2;
+        margin-bottom: 3.6rem;
+    }
     &__contenedor {
+        display: flex;
+        flex-direction: column;
+        // gap:3.2rem;
+        justify-content: space-between;
         @include m.tablet {
-            display: flex;
-            justify-content: space-between;
+            display: grid;
+            grid-auto-flow: dense;
+            grid-template-columns: repeat(14,1fr);
+            align-items: self-start;
+        }
+    }
+
+    &__heading{ 
+        font-family: v.$fuente_heading;
+        font-size: 2.4rem;
+    }
+
+    @include m.tablet {
+        &__detalles{
+            grid-row: 1/2;
+            grid-column: 1/9;
+            
         }
     }
 
     &__resumen {
+        order: 1;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         row-gap: 1.6rem;
-
+        margin-bottom: 3.6rem;
+        
         @include m.tablet {
+            grid-column: 9/15;
             display: flex;
             flex-direction: column;
-            padding: 4rem;
+            gap: 2.4rem;
+            padding: 4rem 1rem 4rem 4rem;
             border-radius: 1.2rem;
             background: #FFF;
             box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.10);
         }
+
+        @include m.desktop {
+            grid-column: 11/15; 
+        }
     }
+
+    &__procedimiento {
+        grid-row: 2/3;
+        grid-column: 1/9;
+        order: 3;
+    }
+
 }
