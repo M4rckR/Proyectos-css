@@ -1,0 +1,23 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.main {
+    @include m.grid(2,1rem);
+
+    grid-template-rows: repeat(3,45rem);
+    @include m.tablet {
+        @include m.grid(3,2rem);
+    }
+}
+
+.main__item {
+    &:nth-child(even) {
+        align-self: self-end;
+    }
+    .main__people {
+        display: flex;
+    }
+
+
+}

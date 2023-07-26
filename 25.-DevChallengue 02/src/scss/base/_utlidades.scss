@@ -1,0 +1,22 @@
+@use 'variables' as v;
+
+.w-400 {
+    font-weight: 400;
+}
+
+
+.w-600 {
+    font-weight: 600;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.font-heading {
+    font-family: v.$font-heading;
+}
+
+.capitalize {
+    text-transform: uppercase;
+}

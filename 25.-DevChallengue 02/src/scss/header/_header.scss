@@ -1,0 +1,40 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.header {
+    margin-top: 2.8rem;
+
+    @include m.tablet {
+        margin-top: 4rem;
+    }
+    
+    .header__content {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5rem;
+        
+        @include m.tablet {
+            flex-direction: row;
+            justify-content: space-between;
+
+            .header__box {
+                max-width: 33rem;
+            }
+        }
+
+        .header__title {
+            font-size: 3.2rem;
+            margin-bottom: 4rem;
+
+            @include m.tablet {
+                font-size: 3.8rem;
+                margin-bottom: 0;
+            }
+        }
+
+        .header__sub {
+            margin: 0;
+        }
+    }
+}
+
