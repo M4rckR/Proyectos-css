@@ -1,0 +1,49 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.profile {
+    margin: 2.4rem 0 1.4rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include m.tablet {
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+    }
+
+    &__img{
+        margin: 0;
+        width: 10rem;
+        border-radius: 1.6rem;
+        overflow: hidden;
+        margin-bottom: 1rem;
+
+        @include m.tablet {
+            width: 15rem;
+        }
+    }
+
+    &__name,
+    &__city {
+        text-align: center;
+    }
+
+    &__name {
+        font-size: 1.4rem;
+
+        @include m.tablet {
+            font-size: 2.4rem;
+        }
+    }
+
+    &__city {
+        font-size: 1rem;
+        margin: .5rem 0;
+        color: v.$color_secundario;
+
+        @include m.tablet {
+            font-size: 1.4rem;
+        }
+    }
+}
