@@ -1,0 +1,86 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.galeria {
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(3,30rem);
+        gap: 2rem;
+        margin-bottom: 2rem;
+
+        @include m.telefono {
+            grid-template-rows: repeat(3,45rem);
+        }
+
+        @include m.tablet {
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(2,45rem);
+        }
+
+        @include m.desktop-xl {
+            column-gap: 4rem;
+            grid-template-rows: repeat(2,55rem);
+        }
+    }
+
+    &__profile {
+        display: flex;
+    }
+
+    &__imagen{
+        width: 90%;
+        height: 20rem;
+        object-fit: cover;
+
+        @include m.telefono {
+            height: 35rem;
+        }
+
+        @include m.desktop-xl {
+            height: 45rem;
+        }
+    }
+
+    &__item {
+
+        &:nth-child(even){
+            align-self: flex-end;
+        }
+
+
+        @include m.tablet {
+
+
+            
+            &:nth-child(4){
+                align-self: flex-start;
+            }
+
+            &:nth-child(5){
+                align-self: flex-end;
+            }
+
+            &:nth-child(6){
+                align-self: flex-start;
+            }
+
+        }
+    }
+
+    &__puesto {
+        writing-mode: vertical-lr;
+        margin: 0;
+        font-family: v.$font-heading;
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: 1rem;
+        margin-left: .25rem;
+    }
+
+    &__nombre {
+        font-size: 1.4rem;
+        margin: 1rem 0;
+        font-weight: 600;
+    }
+}

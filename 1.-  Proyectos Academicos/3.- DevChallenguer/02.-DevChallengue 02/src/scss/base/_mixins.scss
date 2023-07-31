@@ -18,6 +18,12 @@
     }
 }
 
+@mixin desktop-xl {
+    @media (min-width: v.$desktop-xl) {
+        @content;
+    }
+}
+
 @mixin grid( $columnas, $espaciado) {
     display: grid;
     grid-template-columns: repeat($columnas,1fr);
