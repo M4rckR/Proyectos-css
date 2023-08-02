@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+  <title>Checkout Page</title>
+  <link rel="stylesheet" href="build/css/app.css">
+</head>
+<body>
+  <header class="checkout contenedor">
+    <h1 class="checkout__title">Checkout</h1>
+  </header>
+
+  <main class="formulario contenedor">
+    <div class="carrito">
+      <div class="carrito__items">
+
+        <div class="producto">
+          <figure class="producto__imagen">
+            <img src="build/img/photo1.webp" alt="producto mochila">
+          </figure>
+          <div class="producto__detalles">
+            <div class="producto__texto">
+              <div class="producto__detalle">
+                <p class="producto__nombre">Vintage Backbag</p>
+              </div>
+              <div class="producto__precio">
+                <p class="producto__oferta">$54.99</p>
+                <p class="producto__monto">$94.99</p>
+              </div>
+            </div>
+
+            <div class="producto__cantidad">
+              <img class="producto__menos" src="build/img/menos.svg" alt="mas">
+              <p class="producto__number">1</p>
+              <img class="producto__mas" src="build/img/mas.svg" alt="menos">
+            </div>
+          </div>
+        </div>
+
+        <div class="producto">
+          <figure class="producto__imagen">
+            <img src="build/img/photo2.webp" alt="producto zapatos">
+          </figure>
+          <div class="producto__detalles">
+            <div class="producto__texto">
+              <div class="producto__detalle">
+                <p class="producto__nombre">Levi Shoes</p>
+              </div>
+              <div class="producto__precio">
+                <p class="producto__oferta">$74.99</p>
+                <p class="producto__monto">$124.99</p>
+              </div>
+            </div>
+
+            <div class="producto__cantidad">
+              <img class="producto__menos" src="build/img/menos.svg" alt="mas">
+              <p class="producto__number">1</p>
+              <img class="producto__mas" src="build/img/mas.svg" alt="menos">
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="carrito__resumen">
+        <div class="carrito__montos">
+          <p class="carrito__prop">Shipping</p>
+          <p class="carrito__neto">$19</p>
+        </div>
+        <div class="carrito__montos">
+          <p class="carrito__prop">Total</p>
+          <p class="carrito__neto">$148.98</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="datos">
+      <section class="datos__contacto">
+        <h3>Contact information</h3>
+        <form class="datos__formulario">
+          <div class="datos__box">
+            <label for="email">Email</label>
+            <input id="email" class="datos__email" type="text" placeholder="Enter your email...">
+          </div>
+          <div class="datos__box">
+            <label for="tel">Phone</label>
+            <input id="tel" class="datos__tel" type="tel" placeholder="Enter your phone...">
+          </div>
+        </form>
+      </section>
+
+      <section class="datos__direccion">
+        <h3>Shipping address</h3>
+        <form class="datos__formulario"></form>
+      </section>
+    </div>
+  </main>
+</body>
+</html> 

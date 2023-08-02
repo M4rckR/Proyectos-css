@@ -1,0 +1,20 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.checkout {
+    margin-top: 3.2rem;
+    margin-bottom: 2.4rem;
+    &__title {
+        font-size: 2.4rem;
+        color:  v.$color_heading;
+
+        @include m.tablet {
+            font-size: 3.6rem;
+        }
+    }
+}
+
+.formulario {
+    display: flex;
+    justify-content: space-between;
+}

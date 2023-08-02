@@ -1,0 +1,68 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.producto {
+    @include m.grid(2,2.2rem);
+    margin-bottom: 3.2rem;
+
+    &__detalles {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__imagen {
+        overflow: hidden;
+        margin: 0;
+        border-radius: 1.2rem;
+    }
+
+    &__nombre{
+        margin: 0 0 1rem 0;
+        font-size: 1.4rem;
+    }
+
+    &__precio {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    &__oferta, &__monto {
+        margin: 0;
+    }
+
+    &__oferta {
+        font-size: 1.4rem;
+        color: v.$orange;
+    }
+
+    &__monto {
+        font-size: 1rem;
+        color: v.$color_heading;
+        text-decoration: line-through;
+    }
+
+    &__cantidad {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid v.$color_texto;
+        border-radius: 1.2rem;
+        padding: 1.4rem 1rem;
+    }
+
+    &__mas, &__menos {
+        background-color: #e2e2e2;
+        border-radius: .5rem;
+        transition: background-color .25s;
+    }
+
+    &__mas:active, &__menos:active {
+        background-color: #c2c2c2;
+    }
+
+    &__number {
+        margin: 0;
+    }
+}
