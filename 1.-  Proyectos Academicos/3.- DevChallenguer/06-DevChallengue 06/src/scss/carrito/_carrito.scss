@@ -2,13 +2,15 @@
 @use 'base/variables' as v;
 
 .carrito {
-    max-width: 38rem;
+    
     padding: 2.6rem;
     background-color: v.$color_back;
     border-radius: 1.2rem;
 
+
     @include m.tablet {
         order: 2;
+        max-width: 38rem;
     }
 
     &__resumen {
@@ -33,7 +35,6 @@
     @include m.tablet {
         &__prop {
             font-size: 1.8rem;
-
         }
     }
 }

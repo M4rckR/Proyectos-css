@@ -20,12 +20,18 @@
     &__nombre{
         margin: 0 0 1rem 0;
         font-size: 1.4rem;
+        
+        @media (min-width: 550px) {
+            font-size: 1.6rem;
+        }
     }
 
     &__precio {
         display: flex;
         align-items: center;
         gap: 1rem;
+
+
     }
 
     &__oferta, &__monto {
@@ -35,12 +41,18 @@
     &__oferta {
         font-size: 1.4rem;
         color: v.$orange;
+        @media (min-width: 550px) {
+            font-size: 1.6rem;
+        }
     }
 
     &__monto {
         font-size: 1rem;
         color: v.$color_heading;
         text-decoration: line-through;
+        @media (min-width: 550px) {
+            font-size: 1.2rem;
+        }
     }
 
     &__cantidad {
@@ -64,5 +76,9 @@
 
     &__number {
         margin: 0;
+
+        @media (min-width: 550px) {
+            font-size: 1.6rem;
+        }
     }
 }
