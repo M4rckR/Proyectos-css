@@ -1,0 +1,39 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.nosotros {
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    @include m.tablet {
+        padding: 10rem 0 0 0 0;
+        flex-direction: row;
+        gap: 6rem;
+    }
+
+    &__descripcion {
+        line-height: 1.6;
+    }
+
+    &__boton {
+        width: 100%;
+        text-align: center;
+        background-color: v.$color2;
+        color: v.$color4;
+        padding: 1.6rem 0;
+        font-weight: 600;
+        font-size: 2rem;
+
+        @include m.tablet {
+            width: 45%;
+        }
+    }
+
+    &__imagen{
+        @include m.tablet {
+            max-width: 40rem;
+        }     
+    }
+}

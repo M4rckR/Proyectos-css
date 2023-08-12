@@ -1,0 +1,33 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.menu {
+    margin-top: -1rem;
+    padding: 10rem 0;
+    background-color: v.$color4;
+    &__titulo {
+        position: relative;
+        margin-bottom: 2rem;
+        &::after {
+            right: 0;
+            content: '';
+            position: absolute;
+            width: 4rem;
+            height: 4rem;
+            background-image: url(../img/carrito.png);
+            background-repeat: no-repeat;
+            background-size: 4rem 4rem;
+            animation: carro 2s alternate infinite;
+        }
+    }
+}
+
+@keyframes carro {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-400%);
+    }
+}

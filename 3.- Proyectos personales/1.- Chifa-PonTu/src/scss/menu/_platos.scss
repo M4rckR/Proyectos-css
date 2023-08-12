@@ -1,0 +1,42 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.platos {
+    @include m.tablet {
+        display: grid;
+        @include m.grid(3,2rem);
+    }
+}
+
+.plato {
+    padding: 2rem;
+    background-color: #FFF;
+    margin-bottom: 2rem;
+
+    @include m.tablet {
+        margin-bottom: 0;
+    }
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+    &__nombre {
+        font-weight: 600;
+        font-size: 2rem;
+        color: v.$color1;
+        margin: 1rem 0 0 0;
+
+    }
+    &__descripcion {
+        color: v.$color2;
+    }
+
+    &__agregar {
+        width: 100%;
+        text-align: center;
+        background-color: v.$color1;
+        padding: 1rem 0;
+        color: v.$color4;
+        font-weight:600;
+    }
+}

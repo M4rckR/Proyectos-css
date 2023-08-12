@@ -1,0 +1,138 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.hero {
+    width: 100%;
+    position: relative;
+
+    &::after {
+        position: absolute;
+        z-index: -100;
+        top: 0;
+        bottom: 0;
+        content: '';
+        display: block;
+        width: 100%;
+        background-image: url(../img/hero-imagePhone.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        margin: 0;
+        padding: 0;
+        backdrop-filter: blur(60%);
+
+        @include m.tablet {
+            background-image: url(../img/hero-image.webp);
+        }
+    }
+
+
+    &__container {
+        padding: 12rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        @include m.tablet {
+            padding: 25rem 0;
+        }
+    }
+
+    &__title {
+        font-size: 4rem;
+        text-align: center;
+        color: v.$color4;
+        -webkit-text-stroke: .5px v.$color1;
+        @include m.tablet {
+            font-size: 6rem;
+            -webkit-text-stroke: .15rem v.$color1;
+        }
+    }
+
+
+    &__link {
+        background-color: v.$color1;
+        padding: 1rem 2rem;
+        border-radius: .5rem;
+        color: v.$color4;
+        font-weight: 600;
+        @include m.tablet {
+            border: 1px solid v.$color4;
+        }
+    }
+
+    .enlace {
+        display: flex;
+        align-items: center;
+        transition: all .3s ease;
+        &::after,
+        &::before {
+            content: '';
+            display: block;
+            width: 6rem;
+            height: .5rem;
+            background-color: v.$color4;
+        }
+
+        &::after {
+            margin-left: 1rem;
+            animation-name: marcos;
+            animation-duration: 2.5s ;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        &::before {
+            margin-right: 1rem;
+            animation-name: marcos2;
+            animation-duration: 2.5s ;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes marcos {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(50deg) translateY(13rem);
+                background-color: v.$color1;
+                border: 1px solid white;
+            }
+
+            75% {
+                transform: rotate(50deg) translateY(13rem);
+                background-color: v.$color1;
+                border: 1px solid white;
+            }
+
+            100% {
+                transform: unset;
+            }
+        }
+
+        @keyframes marcos2 {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(-50deg) translateY(13rem);
+                background-color: v.$color1;
+                border: 1px solid white;
+            }
+
+            75% {
+                transform: rotate(-50deg) translateY(13rem);
+                background-color: v.$color1;
+                border: 1px solid white;
+            }
+
+            100% {
+                transform: unset;
+            }
+        }
+    }
+}
+
