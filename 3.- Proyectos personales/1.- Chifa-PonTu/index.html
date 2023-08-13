@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="build/css/app.css">
     <link rel="icon" href="build/img/icono.png">
 </head>
@@ -63,8 +64,31 @@
     <section class="menu"> 
         <div class="menu__container contenedor">
             <h3 class="menu__titulo">Tenemos variedad de manjares</h3>
+            <section class="carrito">
+                <table class="carrito__tabla">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Cantidad</th>
+                            <th>Total</th>
+                            <th><i class="bi bi-pencil-square"></i></th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        
+                    </tbody>
+
+                </table>
+
+                <div class="carrito__opciones">
+                    <a class="carrito__vaciar" href="#">Vaciar carrito</a>
+                    <a class="carrito__pagar" href="#">Ir a pagar</a>
+                </div>
+            </section>
+
             <div class="platos">
-                <div class="plato">
+                <div class="plato plato--oferta">
                     <picture class="plato__imagen">
                         <img src="build/img/plato1.webp" alt="Monstrito">
                     </picture>
@@ -72,133 +96,65 @@
                         <p class="plato__nombre">Monstrito</p>
                         <p class="plato__descripcion">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
                         <p class="plato__precio">S/15.00</p>
-                        <a class="plato__agregar" href="#">Agregar al carrito</a>
+                        <a class="plato__agregar" href="#" data-id="1">Agregar al carrito</a>
+                    </div>
+                </div> <!--Final de plato-->
+                <div class="plato ">
+                    <picture class="plato__imagen">
+                        <img src="build/img/plato2.webp" alt="Monstrito">
+                    </picture>
+                    <div class="plato__texto">
+                        <p class="plato__nombre">Arroz Chaufa</p>
+                        <p class="plato__descripcion">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <p class="plato__precio">S/10.00</p>
+                        <a class="plato__agregar" href="#" data-id="2">Agregar al carrito</a>
                     </div>
                 </div> <!--Final de plato-->
                 <div class="plato">
                     <picture class="plato__imagen">
-                        <img src="build/img/plato1.webp" alt="Monstrito">
+                        <img src="build/img/plato3.webp" alt="Monstrito">
                     </picture>
                     <div class="plato__texto">
-                        <p class="plato__nombre">Monstrito</p>
+                        <p class="plato__nombre">Aeropuerto</p>
                         <p class="plato__descripcion">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <p class="plato__precio">S/15.00</p>
-                        <a class="plato__agregar" href="#">Agregar al carrito</a>
+                        <p class="plato__precio">S/11.00</p>
+                        <a class="plato__agregar" href="#" data-id="3">Agregar al carrito</a>
                     </div>
                 </div> <!--Final de plato-->
                 <div class="plato">
                     <picture class="plato__imagen">
-                        <img src="build/img/plato1.webp" alt="Monstrito">
+                        <img src="build/img/plato4.webp" alt="Monstrito">
                     </picture>
                     <div class="plato__texto">
-                        <p class="plato__nombre">Monstrito</p>
+                        <p class="plato__nombre">Tallarin saltado</p>
                         <p class="plato__descripcion">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <p class="plato__precio">S/15.00</p>
-                        <a class="plato__agregar" href="#">Agregar al carrito</a>
+                        <p class="plato__precio">S/12.00</p>
+                        <a class="plato__agregar" href="#" data-id="4">Agregar al carrito</a>
+                    </div>
+                </div> <!--Final de plato-->
+                <div class="plato ">
+                    <picture class="plato__imagen">
+                        <img src="build/img/plato5.webp" alt="Monstrito">
+                    </picture>
+                    <div class="plato__texto">
+                        <p class="plato__nombre">Sopa Wantan</p>
+                        <p class="plato__descripcion">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <p class="plato__precio">S/8.00</p>
+                        <a class="plato__agregar" href="#" data-id="5">Agregar al carrito</a>
                     </div>
                 </div> <!--Final de plato-->
                 <div class="plato">
                     <picture class="plato__imagen">
-                        <img src="build/img/plato1.webp" alt="Monstrito">
+                        <img src="build/img/plato6.webp" alt="Monstrito">
                     </picture>
                     <div class="plato__texto">
-                        <p class="plato__nombre">Monstrito</p>
+                        <p class="plato__nombre">Pollo tipakay</p>
                         <p class="plato__descripcion">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <p class="plato__precio">S/15.00</p>
-                        <a class="plato__agregar" href="#">Agregar al carrito</a>
+                        <p class="plato__precio">S/22.00</p>
+                        <a class="plato__agregar" href="#" data-id="6">Agregar al carrito</a>
                     </div>
                 </div> <!--Final de plato-->
-                <div class="plato">
-                    <picture class="plato__imagen">
-                        <img src="build/img/plato1.webp" alt="Monstrito">
-                    </picture>
-                    <div class="plato__texto">
-                        <p class="plato__nombre">Monstrito</p>
-                        <p class="plato__descripcion">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <p class="plato__precio">S/15.00</p>
-                        <a class="plato__agregar" href="#">Agregar al carrito</a>
-                    </div>
-                </div> <!--Final de plato-->
-                <div class="plato">
-                    <picture class="plato__imagen">
-                        <img src="build/img/plato1.webp" alt="Monstrito">
-                    </picture>
-                    <div class="plato__texto">
-                        <p class="plato__nombre">Monstrito</p>
-                        <p class="plato__descripcion">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <p class="plato__precio">S/15.00</p>
-                        <a class="plato__agregar" href="#">Agregar al carrito</a>
-                    </div>
-                </div> <!--Final de plato-->
-                <div class="plato">
-                    <picture class="plato__imagen">
-                        <img src="build/img/plato1.webp" alt="Monstrito">
-                    </picture>
-                    <div class="plato__texto">
-                        <p class="plato__nombre">Monstrito</p>
-                        <p class="plato__descripcion">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <p class="plato__precio">S/15.00</p>
-                        <a class="plato__agregar" href="#">Agregar al carrito</a>
-                    </div>
-                </div> <!--Final de plato-->
-                <div class="plato">
-                    <picture class="plato__imagen">
-                        <img src="build/img/plato1.webp" alt="Monstrito">
-                    </picture>
-                    <div class="plato__texto">
-                        <p class="plato__nombre">Monstrito</p>
-                        <p class="plato__descripcion">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <p class="plato__precio">S/15.00</p>
-                        <a class="plato__agregar" href="#">Agregar al carrito</a>
-                    </div>
-                </div> <!--Final de plato-->
-                <div class="plato">
-                    <picture class="plato__imagen">
-                        <img src="build/img/plato1.webp" alt="Monstrito">
-                    </picture>
-                    <div class="plato__texto">
-                        <p class="plato__nombre">Monstrito</p>
-                        <p class="plato__descripcion">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <p class="plato__precio">S/15.00</p>
-                        <a class="plato__agregar" href="#">Agregar al carrito</a>
-                    </div>
-                </div> <!--Final de plato-->
-                <div class="plato">
-                    <picture class="plato__imagen">
-                        <img src="build/img/plato1.webp" alt="Monstrito">
-                    </picture>
-                    <div class="plato__texto">
-                        <p class="plato__nombre">Monstrito</p>
-                        <p class="plato__descripcion">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <p class="plato__precio">S/15.00</p>
-                        <a class="plato__agregar" href="#">Agregar al carrito</a>
-                    </div>
-                </div> <!--Final de plato-->
-                <div class="plato">
-                    <picture class="plato__imagen">
-                        <img src="build/img/plato1.webp" alt="Monstrito">
-                    </picture>
-                    <div class="plato__texto">
-                        <p class="plato__nombre">Monstrito</p>
-                        <p class="plato__descripcion">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <p class="plato__precio">S/15.00</p>
-                        <a class="plato__agregar" href="#">Agregar al carrito</a>
-                    </div>
-                </div> <!--Final de plato-->
-                <div class="plato">
-                    <picture class="plato__imagen">
-                        <img src="build/img/plato1.webp" alt="Monstrito">
-                    </picture>
-                    <div class="plato__texto">
-                        <p class="plato__nombre">Monstrito</p>
-                        <p class="plato__descripcion">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <p class="plato__precio">S/15.00</p>
-                        <a class="plato__agregar" href="#">Agregar al carrito</a>
-                    </div>
-                </div> <!--Final de plato-->
-                
             </div>
-            <div class="carrito"></div>
         </div>
     </section>
 

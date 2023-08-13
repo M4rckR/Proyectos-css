@@ -5,29 +5,40 @@
     margin-top: -1rem;
     padding: 10rem 0;
     background-color: v.$color4;
+
+    &__container {
+        position: relative;
+    }
+
     &__titulo {
         position: relative;
-        margin-bottom: 2rem;
-        &::after {
-            right: 0;
-            content: '';
-            position: absolute;
-            width: 4rem;
-            height: 4rem;
-            background-image: url(../img/carrito.png);
-            background-repeat: no-repeat;
-            background-size: 4rem 4rem;
-            animation: carro 2s alternate infinite;
+        margin-bottom: 6rem;
+        font-size: 3.6rem;
+        text-align: center;
+        @include m.tablet {
+            font-size: 4rem;
+            text-align: left;
+            &::after {
+                right: 0;
+                content: '';
+                position: absolute;
+                width: 4rem;
+                height: 4rem;
+                background-image: url(../img/carrito.png);
+                background-repeat: no-repeat;
+                background-size: 4rem 4rem;
+                animation: carro 2s alternate infinite;
+            }   
         }
     }
 }
 
 @keyframes carro {
     from {
-        transform: translateX(0);
+        transform: translateX(0) rotate(360deg);
     }
 
     to {
-        transform: translateX(-400%);
+        transform: translateX(-500%);
     }
 }

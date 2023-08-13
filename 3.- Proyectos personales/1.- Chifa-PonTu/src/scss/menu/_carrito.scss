@@ -1,0 +1,68 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.carrito {
+    // position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 40;
+    width: unset;
+    height: unset;
+    top: 0;
+    background-color:#f3f3ec;
+    padding: 2rem 3rem;
+    color: black;
+    max-width: 80rem;
+
+    &__tabla {
+        width: 100%;
+    }
+
+    tr {
+        @include m.grid(4,2rem);
+        align-items: center;
+        justify-content: center;
+        &:first-child {
+            padding-bottom: .5rem;
+            border-bottom: 1px solid v.$color3;
+        }
+
+        &.row {
+            padding: 1rem 0;
+        }
+
+        td {
+            text-align: center;
+            flex: 1;
+            padding: 1.6rem 0;
+        }
+    }
+
+
+    &__opciones {
+        display: flex;
+        gap: 1rem;
+        a {
+            flex: 1;
+            text-align: center;
+            font-weight: 600;
+
+            &:nth-child(1){
+                background-color: v.$color4;
+                color: v.$color1 ;
+                padding: 1rem 0;
+            }
+
+            &:nth-child(2){
+                background-color: v.$color1;
+                color: #FFFFFF;
+                padding: 1rem 0;
+            }
+        }
+    }
+
+
+    &__nombre {
+        width: 5rem;
+    }
+}
