@@ -6,17 +6,38 @@ const panelMenu = document.querySelector('.navegacion__links');
 const contenidoCarrito = document.querySelector('.carrito__tabla tbody')
 const vaciarCarrito = document.querySelector('.carrito-vaciar');
 const listaPlatos = document.querySelector('.platos');
+const imagenCarrito = document.querySelector('.menu__items');
+const carritoFigure = document.querySelector('.menu__introduccion');
+
+
+let cantidadItems = 0;
 let articulosCarrito = [];
+// --- Animacion ---
+
 
 cargarEventListener();
 
 function cargarEventListener(){
-    // Interactuar con el menu
-    botonMenu.addEventListener('click', menu);
+    // Interactuar con el menu y hacerlo aparecer
+    botonMenu.addEventListener('click',menu);
 
     // Agregar plato al carrito
     listaPlatos.addEventListener('click', agregarPlato);
+
+    // LA animacion de mostrar el carro
+    carritoFigure.addEventListener('click', mostrarCarro)
+
 }
+
+
+// Mostrar el carro escondido
+function mostrarCarro(e){
+    if(e.target.classList.contains('menu__imgCarro') || e.target.classList.contains('menu__items') ){
+        const carro = listaPlatos.parentElement.querySelector('.carrito');
+        carro.classList.toggle('carrito-activo');
+    }
+}
+
 
 // Interactuar con el menu
 function menu(e) {
@@ -27,9 +48,12 @@ function menu(e) {
 // Agregar plato al carrito
 function agregarPlato(e) {
     e.preventDefault();
+
     if(e.target.classList.contains('plato__agregar')){
         const platoSeleccionado = e.target.parentElement.parentElement;
         leerPlato(platoSeleccionado);
+        cantidadItems++;
+        imagenCarrito.textContent =cantidadItems;
     }
 }
 
@@ -48,7 +72,7 @@ function leerPlato(plato){
     // Comprobar si se repite un elemento
     const existe = articulosCarrito.some(plato => plato.id === infoPlato.id);
     const platoPrecio = parseFloat(infoPlato.precio.slice(2));
-    console.log(platoPrecio);
+    // console.log(platoPrecio);
     // En caso exista actualizamos la cantidad
     if(existe){
         articulosCarrito.forEach(plato =>{

@@ -10,35 +10,52 @@
         position: relative;
     }
 
-    &__titulo {
-        position: relative;
+    &__introduccion {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         margin-bottom: 6rem;
+        flex-direction: column;
+        gap: 2rem;
+
+        @include m.tablet {
+            flex-direction: row;
+        }
+    }
+
+    &__titulo {
         font-size: 3.6rem;
         text-align: center;
         @include m.tablet {
             font-size: 4rem;
-            text-align: left;
-            &::after {
-                right: 0;
-                content: '';
-                position: absolute;
-                width: 4rem;
-                height: 4rem;
-                background-image: url(../img/carrito.png);
-                background-repeat: no-repeat;
-                background-size: 4rem 4rem;
-                animation: carro 2s alternate infinite;
-            }   
+            text-align: left; 
         }
     }
-}
 
-@keyframes carro {
-    from {
-        transform: translateX(0) rotate(360deg);
+    &__figure {
+        position: relative;
+        height: 5rem;
+        width: 5rem;
+        cursor: pointer;
     }
 
-    to {
-        transform: translateX(-500%);
+    &__items {
+        position: absolute;
+        width: 2rem;
+        height: 2rem;
+        top: 0;
+        right: -1rem;
+        margin: 0;
+        background-color: green;
+        padding: 1.6rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #FFF;
+        font-family: Arial, Helvetica, sans-serif;
     }
+
 }
+
+
