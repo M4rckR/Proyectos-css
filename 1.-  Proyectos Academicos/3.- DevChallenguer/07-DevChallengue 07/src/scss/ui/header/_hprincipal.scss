@@ -1,0 +1,36 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.hero {
+
+    &__cabecera {
+        padding-right: 1rem;
+        @include m.tablet {
+            padding-right: 25rem;
+        }
+    }
+
+    &__anotation {
+        color: #2D9CDB;
+        font-size: 1.2rem;
+        margin: .5rem 0;
+
+        @include m.tablet {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__title {
+        font-size: 2.4rem;
+        margin-bottom: 1.5rem;
+        font-weight: 500;
+
+        @include m.tablet {
+            font-size: 4.8rem;
+        }
+    }
+
+    &__picture {
+        border-radius: 1.8rem;
+    }
+}
