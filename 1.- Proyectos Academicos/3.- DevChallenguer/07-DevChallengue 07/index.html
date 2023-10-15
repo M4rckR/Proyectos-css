@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edie homepage</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css"
+        integrity="sha512-+mlclc5Q/eHs49oIOCxnnENudJWuNqX5AogCiqRBgKnpoplPzETg2fkgBFVC6WYUVxYYljuxPNG8RE7yBy1K+g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="build/img/portafolio_icono.png">
+    <link rel="stylesheet" href="build/css/app.css">
+</head>
+
+<body>
+
+    <div class="overlay"></div>
+
+    <header class="header">
+        <section class="header__nav contenedor">
+            <p class="header__name">Edie</p>
+            <div class="header__menu">
+                <button class="hamburger hamburger--collapse" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
+            <div class="header__links">
+                <a class="header__link" href="#">Home</a>
+                <a class="header__link" href="#">Services</a>
+                <a class="header__link" href="#">Our Works</a>
+                <a class="header__link" href="#">Clients</a>
+                <a class="header__link" href="#">Contact</a>
+            </div>
+        </section>
+
+
+        <section class="hero">
+            <div class="hero__cabecera contenedor contenedor--max">
+                <h3 class="hero__anotation">Unhappy with your website?</h3>
+                <h3 class="hero__title">We create beautiful</h3>
+                <p class="hero__title">and fast web services</p>
+            </div>
+
+            <div class="hero__image contenedor">
+                <img class="hero__picture" src="build/img/heroImage.webp" alt="Imagen de personas">
+            </div>
+
+            <div class="hero__contenido contenedor contenedor--max">
+                <h3 class="hero__title">Story, emotion</h3>
+                <h3 class="hero__title">and purpose</h3>
+                <p class="hero__text">We help transform your ideas into real world applications that will outperform your toughest competition and help you achieve your strategic goals in short period of time.</p>
+            </div>
+
+            <div class="hero__contact contenedor contenedor--max">
+                <p class="hero__question">Want us to contact you?</p>
+                <form class="hero__form">
+                    <input class="hero__email" type="text" placeholder="Email">
+                    <input class="hero__submit" type="submit" value="Join">
+                </form>
+            </div> 
+        </section>
+
+    </header>
+
+
+    <main class="main">
+        <div class="main__container contenedor">
+            <h3 class="main__title">We offer high demand services</h3>
+            <section class="main__services">
+                <article class="service">
+                    <figure class="service__img service__img--blue">
+                        <span class=" blue white material-symbols-outlined">code</span>
+                    </figure>
+                    <h4 class="service__title">UI/UX Design</h4>
+                    <p class="service__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Duis a metus ac nulla consequat aliquet id quis turpis.</p>
+                    
+                    <a class="service__button" href="#">Get started</a>       
+                </article>
+
+                <article class="service service--shadow">
+                    <figure class="service__img service__img--green">
+                        <span class="green white material-symbols-outlined">code</span>   
+                    </figure>
+                    <h4 class="service__title">Front End</h4>
+                    <p class="service__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Duis a metus ac nulla consequat aliquet id quis turpis.</p> 
+                    <a class="service__button service__button--blue" href="#">Get started</a>           
+                </article>
+
+
+                <article class="service">
+                    <figure class="service__img service__img--red">
+                        <span class=" red white material-symbols-outlined">storage</span>
+                    </figure>
+                    <h4 class="service__title">Back End</h4>
+                    <p class="service__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Duis a metus ac nulla consequat aliquet id quis turpis.</p>  
+                    <a class="service__button" href="#">Get started</a>              
+                </article>  
+            </section>
+        </div>
+    </main>
+
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>

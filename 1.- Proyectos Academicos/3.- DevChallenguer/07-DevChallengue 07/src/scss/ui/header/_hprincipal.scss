@@ -1,0 +1,113 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.hero {
+    margin-bottom: 15rem;
+    &__anotation {
+        color: #2D9CDB;
+        font-size: 1.2rem;
+        font-weight: 400;
+
+        @include m.tablet {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__text {
+        max-width: 36.6rem;
+        line-height: normal;
+        font-size: 1.2rem;
+        @include m.tablet {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__title {
+        font-size: 2.4rem;
+        font-weight: 500;
+        margin: 0;
+
+        @include m.tablet {
+            font-size: 4.8rem;
+        }
+    }
+
+    &__picture {
+        border-radius: 1.8rem;
+    }
+
+    &__image {
+        margin-top: 1.6rem;
+        margin-bottom: 1.6rem;
+
+        @include m.tablet {
+            margin-top: 4.2rem;
+            margin-bottom: 4.2rem;
+        }
+    }
+
+    &__contact {
+        max-height: 4.7rem;
+        margin-top: 3.1rem;
+    }
+
+    &__question {
+        color: v.$gray;
+        font-size: 1rem;
+        margin-bottom: 0;
+
+        @include m.tablet {
+            font-size: 1.4rem;
+        }
+    }
+
+    &__form {
+        display: flex;
+        background-color: v.$gray3;
+        padding: .25rem;
+        border-radius: 1.2rem;
+        @include m.tablet {
+            padding: .5rem;
+        }
+    }
+
+    &__email {
+        width: 100%;
+        display: block;
+        border: none;
+        outline: none;
+        background-color: v.$gray3;
+        text-indent: 1rem;
+
+    }
+
+    &__email::placeholder {
+        text-indent: 1rem;
+        font-weight: 400;
+        color: v.$gray2;
+        font-size: 1.4rem;
+
+        @include m.tablet {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__submit {
+        background-color: #2D9CDB;
+        border: none;
+        padding: 1.2rem 1.4rem;
+        color: white;
+        border-radius: 1.2rem;
+        font-size: 1.4rem;
+        cursor: pointer;
+        @include m.tablet {
+            font-size: 1.8rem;
+            padding: 1.4rem 1.8rem;
+        }
+    }
+
+    &__form {
+        max-width: 35rem;
+    }
+}
