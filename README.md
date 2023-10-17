@@ -4,3 +4,4 @@
 - 12/08/2023 Empece a aprender JavaScript y comence con el desarrollo de el aplicativo de chifa para un amigo
 - 19/09/2023 Ya consegui trabajo trainee y repaso en mis tiempo libre y ocios de trabajo, aun quiero trabajar en front, ya que lo que veo ahora solamente es Sap abap y no me gusta del todo pero me gusta aprender y  por eso sigo adelante.
 - 16/10/2023 Necesito fuerzas para repasar constante mi ingles y lo de programacion, tengo el terror de quedarme atras pateando latas, se que puedo, pero paso a paso.
+- 16/10/2023 (Noche) Tratare en lo posible de estudiar css y js Juntos, quiero consolidar mis conocimientos y si sigo indeciso jamas lo hare.
