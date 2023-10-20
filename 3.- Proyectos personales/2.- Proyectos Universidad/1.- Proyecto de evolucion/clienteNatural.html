@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/dataTables.bootstrap5.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary px-sm-2 py-4 fs-5">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <h3 class="m-0" style="font-weight: 900;">JICARO SERIN</h3>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Empleados</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Cliente
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="clienteEmpresarial.html">Empresariales</a></li>
+                                <li><a class="dropdown-item disabled bg-black text-white"
+                                        href="clienteNatural.html ">Naturales</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Producto
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Ver Productos</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item fw-bold" href="#">Proveedores</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form> -->
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Registro de cliente</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="miFormulario">
+                        <div class="d-flex align-items-center gap-2 ">
+                            <div class="mb-2 flex-grow-1">
+                                <label class="col-form-label" style="font-weight: 700;" for="name">Nombres</label>
+                                <input class="form-control form-control" id="name" type="text">
+                            </div>
+                            <div class="mb-2 flex-grow-1">
+                                <label class="col-form-label" style="font-weight: 700;"
+                                    for="apellidos">Apellidos</label>
+                                <input class="form-control form-control " id="apellidos" type="text">
+                            </div>
+                        </div>
+                        <div class="mb-2 flex-grow-1">
+                            <label class="col-form-label" style="font-weight: 700;" for="email1">Correo</label>
+                            <input class="form-control form-control " id="email1" type="email">
+                        </div>
+
+                        <div class="d-flex align-items-center gap-2">
+                            <div class="mb-2 flex-grow-1">
+                                <label class="col-form-label" style="font-weight: 700;" for="dni">DNI</label>
+                                <input class="form-control form-control" id="dni" type="text">
+                            </div>
+                            <div class="mb-2 flex-grow-1">
+                                <label class="col-form-label " style="font-weight: 700;"
+                                    for="apellidos">Telefono</label>
+                                <input class="form-control form-control " id="apellidos" type="tel">
+                            </div>
+                        </div>
+                        <div class="mb-3 flex-grow-1">
+                            <label class="col-form-label" style="font-weight: 700;" for="distrito">Distrito</label>
+                            <select class="form-select form-select" name="distritos" id="distrito" required>
+                                <option value="ancon">Ancón</option>
+                                <option value="ate">Ate</option>
+                                <option value="barranco">Barranco</option>
+                                <option value="breña">Breña</option>
+                                <option value="carabayllo">Carabayllo</option>
+                                <option value="cercado-lima">Cercado de Lima</option>
+                                <option value="chorrillos">Chorrillos</option>
+                                <option value="comas">Comas</option>
+                                <option value="el-agustino">El Agustino</option>
+                                <option value="jesus-maria">Jesús María</option>
+                                <option value="la-molina">La Molina</option>
+                                <option value="la-victoria">La Victoria</option>
+                                <option value="lince">Lince</option>
+                                <option value="los-olivos">Los Olivos</option>
+                                <option value="lurin">Lurín</option>
+                                <option value="magdalena-del-mar">Magdalena del Mar</option>
+                                <option value="miraflores">Miraflores</option>
+                                <option value="pachacamac">Pachacámac</option>
+                                <option value="pucusana">Pucusana</option>
+                                <option value="pueblo-libre">Pueblo Libre</option>
+                                <option value="puente-piedra">Puente Piedra</option>
+                                <option value="punta-hermosa">Punta Hermosa</option>
+                                <option value="punta-negra">Punta Negra</option>
+                                <option value="rimac">Rímac</option>
+                                <option value="san-bartolo">San Bartolo</option>
+                                <option value="san-borja">San Borja</option>
+                                <option value="san-isidro">San Isidro</option>
+                                <option value="san-juan-de-lurigancho">San Juan de Lurigancho</option>
+                                <option value="san-juan-de-miraflores">San Juan de Miraflores</option>
+                                <option value="san-luis">San Luis</option>
+                                <option value="san-martin-de-porres">San Martín de Porres</option>
+                                <option value="san-miguel">San Miguel</option>
+                                <option value="santa-anita">Santa Anita</option>
+                                <option value="santa-rosa">Santa Rosa</option>
+                                <option value="santiago-de-surco">Santiago de Surco</option>
+                                <option value="surquillo">Surquillo</option>
+                                <option value="villa-el-salvador">Villa El Salvador</option>
+                                <option value="villa-maria-del-triunfo">Villa María del Triunfo</option>
+                            </select>
+                        </div>
+                        <div class="modal-footer d-flex align-items-center input-group p-0 pt-2">
+                            <button class="btn btn-warning flex-grow-1 rounded-end-0 m-0" style="font-weight: 700;"
+                                type="reset">Limpiar</button>
+                            <span class="input-group-text rounded-0">-</span>
+                            <button class="btn btn-success flex-grow-1 rounded-start-0 m-0" style="font-weight: 700;"
+                                type="submit">Registrar</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <main>
+        <div class="container mx-auto my-5 row g-5">
+
+            <div class="col m-0">
+                <section class="d-flex justify-content-between">
+                    <h3>Registro de clientes</h3>
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success"
+                        style="font-weight: 700;">Crear Cliente</button>
+                </section>
+                <div class="table-responsive mt-2">
+                    <table id="miTabla" class="table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>DNI</th>
+                                <th>Nombre</th>
+                                <th>Apellidos</th>
+                                <th>Telefono</th>
+                                <th>Correo</th>
+                                <th>Distrito</th>
+                                <th>Acciones</td>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <!-- Añade estos 25 registros a tu tabla existente -->
+                            <tr>
+                                <td>1</td>
+                                <td>73585945</td>
+                                <td>Marcos Daniel</td>
+                                <td>Romero Garcia</td>
+                                <td>967210241</td>
+                                <td>marcos_tlv_daniel@hotmail.com</td>
+                                <td>Comas</td>
+                                <td>
+                                    <div class="d-flex align-items-center gap-1">
+                                        <i onclick="editar()"
+                                            class="accion bi bi-pencil-fill bg-danger text-white px-2 py-1 rounded"></i>
+                                        <i onclick="eliminar()"
+                                            class="accion bi bi-trash bg-warning text-white px-2 py-1 rounded"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>12345678</td>
+                                <td>Laura</td>
+                                <td>Perez</td>
+                                <td>987654321</td>
+                                <td>laura@example.com</td>
+                                <td>Miraflores</td>
+                                <td>
+                                    <div class="d-flex align-items-center gap-1">
+                                        <i onclick="editar()"
+                                            class="accion bi bi-pencil-fill bg-danger text-white px-2 py-1 rounded"></i>
+                                        <i onclick="eliminar()"
+                                            class="accion bi bi-trash bg-warning text-white px-2 py-1 rounded"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>87654321</td>
+                                <td>Juan</td>
+                                <td>Rodriguez</td>
+                                <td>987123456</td>
+                                <td>juan@example.com</td>
+                                <td>San Isidro</td>
+                                <td>
+                                    <div class="d-flex align-items-center gap-1">
+                                        <i onclick="editar()"
+                                            class="accion bi bi-pencil-fill bg-danger text-white px-2 py-1 rounded"></i>
+                                        <i onclick="eliminar()"
+                                            class="accion bi bi-trash bg-warning text-white px-2 py-1 rounded"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>98765432</td>
+                                <td>Sofia</td>
+                                <td>Martinez</td>
+                                <td>963258741</td>
+                                <td>sofia@example.com</td>
+                                <td>San Borja</td>
+                                <td>
+                                    <div class="d-flex align-items-center gap-1">
+                                        <i onclick="editar()"
+                                            class="accion bi bi-pencil-fill bg-danger text-white px-2 py-1 rounded"></i>
+                                        <i onclick("eliminar()"
+                                            class="accion bi bi-trash bg-warning text-white px-2 py-1 rounded"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>56789012</td>
+                                <td>Diego</td>
+                                <td>Lopez</td>
+                                <td>963741852</td>
+                                <td>diego@example.com</td>
+                                <td>Pueblo Libre</td>
+                                <td>
+                                    <div class="d-flex align-items-center gap-1">
+                                        <i onclick="editar()"
+                                            class="accion bi bi-pencil-fill bg-danger text-white px-2 py-1 rounded"></i>
+                                        <i onclick="eliminar()"
+                                            class="accion bi bi-trash bg-warning text-white px-2 py-1 rounded"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>54321678</td>
+                                <td>Maria</td>
+                                <td>Gomez</td>
+                                <td>921475836</td>
+                                <td>maria@example.com</td>
+                                <td>Barranco</td>
+                                <td>
+                                    <div class="d-flex align-items-center gap-1">
+                                        <i onclick="editar()"
+                                            class="accion bi bi-pencil-fill bg-danger text-white px-2 py-1 rounded"></i>
+                                        <i onclick="eliminar()"
+                                            class="accion bi bi-trash bg-warning text-white px-2 py-1 rounded"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>65432123</td>
+                                <td>Pedro</td>
+                                <td>Ramirez</td>
+                                <td>931847253</td>
+                                <td>pedro@example.com</td>
+                                <td>San Miguel</td>
+                                <td>
+                                    <div class="d-flex align-items-center gap-1">
+                                        <i onclick="editar()"
+                                            class="accion bi bi-pencil-fill bg-danger text-white px-2 py-1 rounded"></i>
+                                        <i onclick="eliminar()"
+                                            class="accion bi bi-trash bg-warning text-white px-2 py-1 rounded"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>98765432</td>
+                                <td>Luis</td>
+                                <td>Fernandez</td>
+                                <td>963258741</td>
+                                <td>luis@example.com</td>
+                                <td>Ate</td>
+                                <td>
+                                    <div class="d-flex align-items-center gap-1">
+                                        <i onclick="editar()"
+                                            class="accion bi bi-pencil-fill bg-danger text-white px-2 py-1 rounded"></i>
+                                        <i onclick("eliminar()"
+                                            class="accion bi bi-trash bg-warning text-white px-2 py-1 rounded"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>54321678</td>
+                                <td>Andrea</td>
+                                <td>Lopez</td>
+                                <td>921475836</td>
+                                <td>andrea@example.com</td>
+                                <td>La Molina</td>
+                                <td>
+                                    <div class="d-flex align-items-center gap-1">
+                                        <i onclick="editar()"
+                                            class="accion bi bi-pencil-fill bg-danger text-white px-2 py-1 rounded"></i>
+                                        <i onclick="eliminar()"
+                                            class="accion bi bi-trash bg-warning text-white px-2 py-1 rounded"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>65432123</td>
+                                <td>Marcos</td>
+                                <td>Ramirez</td>
+                                <td>931847253</td>
+                                <td>marcos@example.com</td>
+                                <td>San Isidro</td>
+                                <td>
+                                    <div class="d-flex align-items-center gap-1">
+                                        <i onclick="editar()"
+                                            class="accion bi bi-pencil-fill bg-danger text-white px-2 py-1 rounded"></i>
+                                        <i onclick="eliminar()"
+                                            class="accion bi bi-trash bg-warning text-white px-2 py-1 rounded"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td>98765432</td>
+                                <td>Angela</td>
+                                <td>Fernandez</td>
+                                <td>963258741</td>
+                                <td>angela@example.com</td>
+                                <td>Pueblo Libre</td>
+                                <td>
+                                    <div class="d-flex align-items-center gap-1">
+                                        <i onclick="editar()"
+                                            class="accion bi bi-pencil-fill bg-danger text-white px-2 py-1 rounded"></i>
+                                        <i onclick("eliminar()"
+                                            class="accion bi bi-trash bg-warning text-white px-2 py-1 rounded"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td>54321678</td>
+                                <td>Sergio</td>
+                                <td>Gomez</td>
+                                <td>921475836</td>
+                                <td>sergio@example.com</td>
+                                <td>San Miguel</td>
+                                <td>
+                                    <div class="d-flex align-items-center gap-1">
+                                        <i onclick="editar()"
+                                            class="accion bi bi-pencil-fill bg-danger text-white px-2 py-1 rounded"></i>
+                                        <i onclick="eliminar()"
+                                            class="accion bi bi-trash bg-warning text-white px-2 py-1 rounded"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td>65432123</td>
+                                <td>Maria</td>
+                                <td>Ramirez</td>
+                                <td>931847253</td>
+                                <td>maria@example.com</td>
+                                <td>Ate</td>
+                                <td>
+                                    <div class="d-flex align-items-center gap-1">
+                                        <i onclick="editar()"
+                                            class="accion bi bi-pencil-fill bg-danger text-white px-2 py-1 rounded"></i>
+                                        <i onclick="eliminar()"
+                                            class="accion bi bi-trash bg-warning text-white px-2 py-1 rounded"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>14</td>
+                                <td>98765432</td>
+                                <td>Luis</td>
+                                <td>Fernandez</td>
+                                <td>963258741</td>
+                                <td>luis@example.com</td>
+                                <td>La Molina</td>
+                                <td>
+                                    <div class="d-flex align-items-center gap-1">
+                                        <i onclick="editar()"
+                                            class="accion bi bi-pencil-fill bg-danger text-white px-2 py-1 rounded"></i>
+                                        <i onclick("eliminar()"
+                                            class="accion bi bi-trash bg-warning text-white px-2 py-1 rounded"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td>54321678</td>
+                                <td>Andrea</td>
+                                <td>Lopez</td>
+                                <td>921475836</td>
+                                <td>andrea@example.com</td>
+                                <td>Pueblo Libre</td>
+                                <td>
+                                    <div class="d-flex align-items-center gap-1">
+                                        <i onclick="editar()"
+                                            class="accion bi bi-pencil-fill bg-danger text-white px-2 py-1 rounded"></i>
+                                        <i onclick="eliminar()"
+                                            class="accion bi bi-trash bg-warning text-white px-2 py-1 rounded"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>16</td>
+                                <td>65432123</td>
+                                <td>Marcos</td>
+                                <td>Ramirez</td>
+                                <td>931847253</td>
+                                <td>marcos@example.com</td>
+                                <td>San Isidro</td>
+                                <td>
+                                    <div class="d-flex align-items-center gap-1">
+                                        <i onclick="editar()"
+                                            class="accion bi bi-pencil-fill bg-danger text-white px-2 py-1 rounded"></i>
+                                        <i onclick="eliminar()"
+                                            class="accion bi bi-trash bg-warning text-white px-2 py-1 rounded"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>17</td>
+                                <td>98765432</td>
+                                <td>Angela</td>
+                                <td>Fernandez</td>
+                                <td>963258741</td>
+                                <td>angela@example.com</td>
+                                <td>San Miguel</td>
+                                <td>
+                                    <div class="d-flex align-items-center gap-1">
+                                        <i onclick="editar()"
+                                            class="accion bi bi-pencil-fill bg-danger text-white px-2 py-1 rounded"></i>
+                                        <i onclick("eliminar()"
+                                            class="accion bi bi-trash bg-warning text-white px-2 py-1 rounded"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>18</td>
+                                <td>54321678</td>
+                                <td>Sergio</td>
+                                <td>Gomez</td>
+                                <td>921475836</td>
+                                <td>sergio@example.com</td>
+                                <td>La Molina</td>
+                                <td>
+                                    <div class="d-flex align-items-center gap-1">
+                                        <i onclick="editar()"
+                                            class="accion bi bi-pencil-fill bg-danger text-white px-2 py-1 rounded"></i>
+                                        <i onclick="eliminar()"
+                                            class="accion bi bi-trash bg-warning text-white px-2 py-1 rounded"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>19</td>
+                                <td>65432123</td>
+                                <td>Maria</td>
+                                <td>Ramirez</td>
+                                <td>931847253</td>
+                                <td>maria@example.com</td>
+                                <td>Ate</td>
+                                <td>
+                                    <div class="d-flex align-items-center gap-1">
+                                        <i onclick="editar()"
+                                            class="accion bi bi-pencil-fill bg-danger text-white px-2 py-1 rounded"></i>
+                                        <i onclick="eliminar()"
+                                            class="accion bi bi-trash bg-warning text-white px-2 py-1 rounded"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>20</td>
+                                <td>98765432</td>
+                                <td>Luis</td>
+                                <td>Fernandez</td>
+                                <td>963258741</td>
+                                <td>luis@example.com</td>
+                                <td>San Isidro</td>
+                                <td>
+                                    <div class="d-flex align-items-center gap-1">
+                                        <i onclick="editar()"
+                                            class="accion bi bi-pencil-fill bg-danger text-white px-2 py-1 rounded"></i>
+                                        <i onclick("eliminar()"
+                                            class="accion bi bi-trash bg-warning text-white px-2 py-1 rounded"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>21</td>
+                                <td>54321678</td>
+                                <td>Andrea</td>
+                                <td>Lopez</td>
+                                <td>921475836</td>
+                                <td>andrea@example.com</td>
+                                <td>Comas</td>
+                                <td>
+                                    <div class="d-flex align-items-center gap-1">
+                                        <i onclick="editar()"
+                                            class="accion bi bi-pencil-fill bg-danger text-white px-2 py-1 rounded"></i>
+                                        <i onclick="eliminar()"
+                                            class="accion bi bi-trash bg-warning text-white px-2 py-1 rounded"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>22</td>
+                                <td>65432123</td>
+                                <td>Marcos</td>
+                                <td>Ramirez</td>
+                                <td>931847253</td>
+                                <td>marcos@example.com</td>
+                                <td>La Molina</td>
+                                <td>
+                                    <div class="d-flex align-items-center gap-1">
+                                        <i onclick="editar()"
+                                            class="accion bi bi-pencil-fill bg-danger text-white px-2 py-1 rounded"></i>
+                                        <i onclick="eliminar()"
+                                            class="accion bi bi-trash bg-warning text-white px-2 py-1 rounded"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>23</td>
+                                <td>98765432</td>
+                                <td>Angela</td>
+                                <td>Fernandez</td>
+                                <td>963258741</td>
+                                <td>angela@example.com</td>
+                                <td>Pueblo Libre</td>
+                                <td>
+                                    <div class="d-flex align-items-center gap-1">
+                                        <i onclick="editar()"
+                                            class="accion bi bi-pencil-fill bg-danger text-white px-2 py-1 rounded"></i>
+                                        <i onclick("eliminar()"
+                                            class="accion bi bi-trash bg-warning text-white px-2 py-1 rounded"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>24</td>
+                                <td>54321678</td>
+                                <td>Sergio</td>
+                                <td>Gomez</td>
+                                <td>921475836</td>
+                                <td>sergio@example.com</td>
+                                <td>Barranco</td>
+                                <td>
+                                    <div class="d-flex align-items-center gap-1">
+                                        <i onclick="editar()"
+                                            class="accion bi bi-pencil-fill bg-danger text-white px-2 py-1 rounded"></i>
+                                        <i onclick="eliminar()"
+                                            class="accion bi bi-trash bg-warning text-white px-2 py-1 rounded"></i>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>25</td>
+                                <td>65432123</td>
+                                <td>Maria</td>
+                                <td>Ramirez</td>
+                                <td>931847253</td>
+                                <td>maria@example.com</td>
+                                <td>San Miguel</td>
+                                <td>
+                                    <div class="d-flex align-items-center gap-1">
+                                        <i onclick="editar()"
+                                            class="accion bi bi-pencil-fill bg-danger text-white px-2 py-1 rounded"></i>
+                                        <i onclick="eliminar()"
+                                            class="accion bi bi-trash bg-warning text-white px-2 py-1 rounded"></i>
+                                    </div>
+                                </td>
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+
+    <footer style="background-color: #212121;">
+        <div class="container mx-auto py-5 text-white ">
+            <div class="d-flex flex-column flex-lg-row flex-sm-column">
+                <div class="flex-grow-1">
+                    <h3>Nosotros</h3>
+                    <ul>
+                        <li>
+                            <a href="#" class="text-decoration-none">Nuestros valores</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-decoration-none">Mision y vision</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-decoration-none">Personal capacitado</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex-grow-1">
+                    <h3>Redes sociales</h3>
+                    <ul>
+                        <li>
+                            <a href="#" class="text-decoration-none">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-decoration-none">Instagram</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-decoration-none">Linkedin</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex-grow-1">
+                    <h3>Encuentranos aqui</h3>
+                    <iframe class="w-100 rounded-4"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1952.0436907840524!2d-77.04877254955859!3d-11.899003645462262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105d0fbaa8244fb%3A0xa340697b7cca2e49!2sAv.%20Chacra%20Cerro%2C%20Comas%2015316!5e0!3m2!1ses!2spe!4v1697772664858!5m2!1ses!2spe"
+                        width="500" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.11.4/js/dataTables.bootstrap5.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#miTabla').DataTable({
+                "pageLength": 5
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.all.min.js"></script>
+
+</body>
+
+</html>
