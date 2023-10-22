@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido</title>
+</head>
+<body>
+    <h1>Hola esta en una pagina hecha con controller</h1>
+    <p th:text="${saludo}"></p>
+    <p th:text="${hola2}"></p>
+
+    <br>
+
+    <p>Nombre: <span th:text="${individuo.nombre}"></span></p>
+</body>
+</html>
