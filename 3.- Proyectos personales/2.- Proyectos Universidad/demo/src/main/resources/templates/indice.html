@@ -20,7 +20,49 @@
         <p>Correo: <span class="text-primary" th:text="${individuo.correo}"></span></p>
         <p>Edad: <span class="text-primary" th:text="${individuo.edad}"></span></p>
 
-        
+        <div  class="table-responsive" th:if="${individuos != null and !individuos.empty}">
+            <table class="table table-striped table-hover table-striped-columns">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Edad</th>
+                        <th>Correo</th>
+                        <th>Telefono</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr th:each="individuo: ${individuos}">
+                        <td th:text="${individuo.nombre}"></td>
+                        <td th:text="${individuo.apellido}"></td>
+                        <td th:text="${individuo.edad}"></td>
+                        <td th:text="${individuo.correo}"></td>
+                        <td th:text="${individuo.telefono}"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div th:if="${individuos == null or individuos.empty}">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Edad</th>
+                        <th>Correo</th>
+                        <th>Telefono</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td class="text-center fs-5" colspan="5"> La tabla no tiene informacion</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </section>
 
     
