@@ -7,3 +7,8 @@
 - 16/10/2023 (Noche) Tratare en lo posible de estudiar css y js Juntos, quiero consolidar mis conocimientos y si sigo indeciso jamas lo hare.
 - 26/10/2023 Me cuesta mucho adaptarme a tailwind, tiene bastante dificultad cuando eres nuevo, tengo muchas cosas que repasar, aunque tengo que admitir que el saber css ha hecho que todo sea pan comido.
 *REMOVERE LOS PROYECTOS DE JAVA PARA NO INTERFERIR CON LA TEMATICA PRINCIPAL*
+
+# Fin del repo
+- Esto no es el fin de mi historia como desarrollador, sino mas bien voy a pasar a crear un repo por pagina, asi sea reto, o algo simple, por lo que dejare de acumular repo tras repo aqui, fue un placer.
+- Podran acceder a este repo cuando deseen siempre que lo necesiten para revisarlo
+- He usado todo lo que se puede usar en css (al menos la mayoria) sass, css puro, tailwind (menos bootstrap, ya que tambien me pasare a hacerlos aparte)
